@@ -94,7 +94,7 @@ abstract class AppengineProject(info: ProjectInfo) extends DefaultWebProject(inf
 
   def appengineAgentPath = appengineLibPath / "agent" / "appengine-agent.jar"
 
-  def devAppserverJvmOptions:Seq[String] = List()
+  def devAppserverJvmOptions:Seq[String] = List("-Djava.awt.headless=true")
   lazy val devAppserverInstance = new DevAppserverRun
   lazy val devAppserverStart = devAppserverStartAction
   lazy val devAppserverStop = devAppserverStopAction

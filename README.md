@@ -14,8 +14,8 @@ Usage
 
 export environment variables
 
-    export APPENGINE_SDK_HOME=~/appengine-java-sdk-1.4.0
-    export JREBEL_JAR_PATH=~/jrebel/jrebel.jar
+    export APPENGINE_HOME=~/appengine-java-sdk-1.4.0
+    export JREBEL_HOME=~/jrebel-3.5
 
 Create project/plugins/Plugins.scala
 

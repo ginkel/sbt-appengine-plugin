@@ -49,8 +49,8 @@ abstract class AppengineProject(info: ProjectInfo) extends DefaultWebProject(inf
   }
 
   def appengineSdkPath = {
-    val sdk = System.getenv("APPENGINE_SDK_HOME")
-    if (sdk == null) error("You need to set APPENGINE_SDK_HOME")
+    val sdk = System.getenv("APPENGINE_HOME")
+    if (sdk == null) error("You need to set the APPENGINE_HOME environment variable.")
     Path.fromFile(new File(sdk))
   }
 
@@ -176,12 +176,12 @@ trait JRebel extends AppengineProject {
 
   def jrebelJvmOptions:Seq[String] = List()
   def jrebelPath = {
-    val jrebel = System.getenv("JREBEL_JAR_PATH")
+    val jrebel = System.getenv("JREBEL_HOME")
     if (jrebel == null) {
-      log.error("You need to set JREBEL_JAR_PATH")
+      log.error("You need to set the JREBEL_HOME environment variable.")
       None
     } else
-      Some(Path.fromFile(new File(jrebel)))
+      Some(Path.fromFile(new File(jrebel)) / "jrebel.jar")
   }
 
 }

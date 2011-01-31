@@ -1,7 +1,7 @@
 Require
 =======
 
- * [sbt][] 0.7.3
+ * [sbt][] 0.7.4
  * [Google App Engine SDK][GAE]
  * [JRebel][] optional
 
@@ -22,7 +22,7 @@ Create project/plugins/Plugins.scala
 <pre><code>import sbt._
 
 class Plugins(info: ProjectInfo) extends PluginDefinition(info) {
-  val appenginePlugin = "net.stbbs.yasushi" % "sbt-appengine-plugin" % "2.2"
+  val appenginePlugin = "net.stbbs.yasushi" % "sbt-appengine-plugin" % "2.3-SNAPSHOT"
 }
 </code></pre>
 
